@@ -135,12 +135,19 @@ import org.junit.jupiter.api.Test;
 class ToDoItemTest {
 
 	@Test
-	void testEsVencida() {
+	void testTareaEsVencida() {
 		ToDoItem item = new ToDoItem("item de prueba");
 		item.setVencimiento(LocalDate.of(2025, 01, 18));
 		
-		assertFalse(item.esVencida(LocalDate.of(2025, 01, 20)));
-		assertTrue(item.esVencida(LocalDate.of(2025, 01, 16)));
+		assertTrue(item.esVencida(LocalDate.of(2025, 01, 20)));
+	}
+  
+  @Test
+	void testTareaNoEsVencida() {
+		ToDoItem item = new ToDoItem("item de prueba");
+		item.setVencimiento(LocalDate.of(2025, 01, 18));
+		
+		assertFalse(item.esVencida(LocalDate.of(2025, 01, 16)));
 	}
 
 }
