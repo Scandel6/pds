@@ -92,7 +92,7 @@ public class ToDoItem {
 	 * @return true si la tarea ha vencido en esa fecha.
 	 */
 	public boolean esVencida(LocalDate date) {
-		return this.vencimiento.isAfter(date);
+		return this.vencimiento.isBefore(date);
 	}
 	
 	public Set<? extends Etiqueta> getEtiquetas() {
