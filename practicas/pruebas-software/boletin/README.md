@@ -233,8 +233,8 @@ public class ToDoItemTest {
 	private static List<Arguments> fechasParaEsVencida() {
 		LocalDate fechaVencimiento = LocalDate.of(2025, 01, 18);
 		return List.of(
-			Arguments.of(fechaVencimiento, LocalDate.of(2025, 01, 20), false),
-			Arguments.of(fechaVencimiento, LocalDate.of(2025, 01, 16), true)		
+			Arguments.of(fechaVencimiento, LocalDate.of(2025, 01, 20), true),
+			Arguments.of(fechaVencimiento, LocalDate.of(2025, 01, 16), false)		
 		);
 	}
 	
