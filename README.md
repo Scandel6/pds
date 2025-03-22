@@ -6,6 +6,7 @@ Material de la asignatura Procesos de Desarrollo de Software (PDS).
 
 * Ejemplos
   - [Microkernel](ejemplos/microkernel/)
+  - [Persistencia con JPA](ejemplos/persistencia-biblioteca/)
 
 * Prácticas de laboratorio
   - [Pruebas de software](practicas/pruebas-software)
