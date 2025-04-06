@@ -10,3 +10,4 @@ Material de la asignatura Procesos de Desarrollo de Software (PDS).
 
 * Prácticas de laboratorio
   - [Pruebas de software](practicas/pruebas-software)
+  - [Persistencia con JPA](practicas/persistencia)
