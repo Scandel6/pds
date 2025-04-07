@@ -7,10 +7,15 @@ import java.util.stream.Collectors;
 /**
  * Una lista donde las tareas se ordenan de manera estandar.
  */
+@Entity
 public class ToDoListNormal extends ToDoList {
 
 	public ToDoListNormal(String titulo) {
 		super(titulo);
+	}
+	
+	public ToDoListNormal() {
+		super();
 	}
 
 	/**

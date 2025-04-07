@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.annotation.CheckForNull;
 
+@Entity
 public abstract class ToDoList {
 
 	// El identificador para la base de datos
@@ -13,7 +14,15 @@ public abstract class ToDoList {
 	private Integer id = null;
 	
 	private String titulo;
+
+	// Cambio de tipo LAZY (por defecto en JPA a EAGER)
+	@OneToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.MERGE, CascadeType.REMOVE})
+	@JoinColumn(name = "todolist_id")
 	protected final List<ToDoItem> items;
+
+	public ToDoList(){
+		this.items = new ArrayList<ToDoItem>();
+	}
 	
 	public ToDoList(String titulo) {
 		this.titulo = titulo;

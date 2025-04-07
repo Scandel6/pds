@@ -8,6 +8,7 @@ import java.util.Random;
 /**
  * Una lista donde las tareas se ordenan de manera aleatoria.
  */
+@Entity
 public class ToDoListAleatoria extends ToDoList {
 
 	private boolean esContinua;
@@ -15,6 +16,10 @@ public class ToDoListAleatoria extends ToDoList {
 	public ToDoListAleatoria(String titulo, boolean esContinua) {
 		super(titulo);
 		this.esContinua = esContinua;
+	}
+
+	public ToDoListAleatoria(){
+		super();
 	}
 	
 	public boolean isContinua() {

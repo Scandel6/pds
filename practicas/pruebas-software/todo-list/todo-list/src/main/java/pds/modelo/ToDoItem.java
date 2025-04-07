@@ -10,9 +10,14 @@ import javax.annotation.CheckForNull;
 /**
  * Un item de una lista de tareas (ToDo List).
  */
+@Entity
 public class ToDoItem {
 
+	@GeneratedValue
+	private Long id;
 	private String nombre;
+	
+	@Transient
 	private Set<Etiqueta> etiquetas;
 	private Prioridad prioridad;
 	

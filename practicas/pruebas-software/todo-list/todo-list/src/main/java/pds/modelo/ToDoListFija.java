@@ -3,6 +3,7 @@ package pds.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class ToDoListFija extends ToDoList {
 
 	private int numMaximoItems;
@@ -10,6 +11,10 @@ public class ToDoListFija extends ToDoList {
 	public ToDoListFija(String titulo, int numMaximoItems) {
 		super(titulo);
 		this.numMaximoItems = numMaximoItems;
+	}
+
+	public ToDoListFija(){
+		super();
 	}
 
 	public int getNumMaximoItems() {
