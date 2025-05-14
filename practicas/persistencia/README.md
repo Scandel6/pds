@@ -121,6 +121,8 @@ Para implementar la persistencia hay que realizar dos tareas.
 1. Anotar las clases de dominio para hacerlas persistence. Presta especial atención a la herencia, eligiendo una estrategia.
 2. Modificar la clase `RepositorioToDoList` para utilizar un `EntityManager` de JPA para guardar los objetos de dominio y realizar consultas.
 
+**Nota importante:** La clase `Etiqueta` está originalmente como un `Record`. Debes convertirla a una clase normal para que JPA pueda manejarla como un `@Entity`. En cambio, un record sí que puede mapearse a un `@Embeddable`. 
+
 Puedes probar diferentes estrategias de mapeo, en particular para la herencia. 
 No olvides eliminar la base de datos si cambias el mapeo, para que el esquema se reconstruya desde cero.
 
